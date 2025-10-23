@@ -36,18 +36,20 @@ class MaxFilter(logging.Filter):
 
 class PrincipalClasse:
 
-    def __init__(self,msg):
+    def __init__(self,msg,logger):
 
         self.mensagem = msg
+        self.logger = logger
     
     def mostrando_mensagem(self):
 
+        self.logger.info("Testando Logger")
         return self.mensagem
 
 
 def main():
 
-    p = PrincipalClasse("Ola eu sou um teste")
+    p = PrincipalClasse("Ola eu sou um teste",configurando_logger())
     p.mostrando_mensagem()
 
 
