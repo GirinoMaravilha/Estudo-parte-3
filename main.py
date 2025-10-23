@@ -63,7 +63,7 @@ class PrincipalClasse:
     
     def mostrando_mensagem(self):
 
-        self.logger.info("Testando o Logger criado!")
+        self.logger.info("Testando Logger")
         return self.mensagem
 
 
