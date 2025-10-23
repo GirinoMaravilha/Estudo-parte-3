@@ -36,7 +36,7 @@ class MaxFilter(logging.Filter):
 
 class PrincipalClasse:
 
-    def __init__(self,msg,logger):
+    def __init__(self,msg,logger:logging.Logger):
 
         self.mensagem = msg
         self.logger = logger
