@@ -36,18 +36,23 @@ class MaxFilter(logging.Filter):
 
 class PrincipalClasse:
 
-    def __init__(self,msg):
+    def __init__(self,msg,logger:logging.Logger):
 
         self.mensagem = msg
+        self.logger = logger
     
     def mostrando_mensagem(self):
 
+        #FIXME
+        #Toda a vez que o metodo info é chamado, o file habdler é ativado tambem
+        #Provavelmente um problema com o filtro criado "MaxFilter"?
+        self.logger.info("Testando o Logger criado!")
         return self.mensagem
 
 
 def main():
 
-    p = PrincipalClasse("Ola eu sou um teste")
+    p = PrincipalClasse("Ola eu sou um teste",configurando_logger())
     p.mostrando_mensagem()
 
 
